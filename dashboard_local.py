@@ -11,6 +11,10 @@ import plotly.express as px
 import time
 import os
 
+# --- LIMPIEZA AUTOMÁTICA AL INICIAR ---
+if os.path.exists("datos.csv"):
+    os.remove("datos.csv")
+
 st.set_page_config(page_title="Dashboard Viñedo (Local)", layout="wide")
 
 CSV_PATH = "datos.csv"
